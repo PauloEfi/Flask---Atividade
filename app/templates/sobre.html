@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>FlaskApp</h1>
+
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('sobre') }}">Sobre</a>
+        <a href="{{ url_for('contato') }}">Contato</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Desenvolvimento de Sistemas</h2>
+
+    <p>
+        A disciplina de Desenvolvimento de Sistemas capacita o aluno
+        a analisar, projetar e desenvolver softwares modernos.
+    </p>
+
+    <ul>
+        <li>Lógica de Programação</li>
+        <li>Banco de Dados</li>
+        <li>Engenharia de Software</li>
+        <li>Frontend e Backend</li>
+    </ul>
+</main>
+
+<footer>
+    <p>© 2024 Projeto Técnico</p>
+</footer>
+
+</body>
+</html>

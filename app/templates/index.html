@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>FlaskApp</h1>
+
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('sobre') }}">Sobre</a>
+        <a href="{{ url_for('contato') }}">Contato</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Página Inicial</h2>
+    <p>Bem-vindo ao projeto Flask.</p>
+</main>
+
+<footer>
+    <p>© 2024 Projeto Técnico</p>
+</footer>
+
+</body>
+</html>
