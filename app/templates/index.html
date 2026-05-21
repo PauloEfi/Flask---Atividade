@@ -11,10 +11,11 @@
         <nav class="container">
             <div class="logo">Flask<span>App</span></div>
             <ul>
-                <li><a href="/" class="active">Home</a></li>
-                <li><a href="/sobre">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="/contato">Contato</a></li>
+                <li><a href="{{ url_for('homepage') }}" class="active">Home</a></li>
+                <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                <li><a href="{{ url_for('cadastro') }}">Cadastro</a></li>
+                <li><a href="{{ url_for('listagem') }}">Alunos</a></li>
+                <li><a href="{{ url_for('contato') }}">Contato</a></li>
             </ul>
         </nav>
     </header>

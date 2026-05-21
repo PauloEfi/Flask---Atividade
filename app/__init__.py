@@ -1,18 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'chave-secreta-123'
 
-def create_app():
-    app = Flask(__name__)
-
-    @app.route('/')
-    def home():
-        return render_template('index.html')
-
-    @app.route('/sobre')
-    def sobre():
-        return render_template('sobre.html')
-
-    @app.route('/contato')
-    def contato():
-        return render_template('contato.html')
-
-    return app
+from app.routes import homepage, sobre, contato, cadastro, listagem

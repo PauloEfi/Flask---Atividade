@@ -3,51 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Sistema Flask - Sobre</title>
     <link rel="stylesheet" href="static/css/style.css">
+
+    <title>Document</title>
 </head>
 <body>
-    <header>
+    <section class="section-page">
+      <header>
         <nav class="container">
             <div class="logo">Flask<span>App</span></div>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/sobre" class="active">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-                <li><a href="/contato">Contato</a></li>
+                   <li><a href="{{ url_for('homepage') }}" class="active">Home</a></li>
+                <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+                <li><a href="{{ url_for('cadastro') }}">Cadastro</a></li>
+                <li><a href="{{ url_for('listagem') }}">Alunos</a></li>
+                <li><a href="{{ url_for('contato') }}">Contato</a></li>
+            </ul>
             </ul>
         </nav>
     </header>
-
-    <main class="container">
-        <header class="page-header">
-            <h1>Desenvolvimento de Sistemas</h1> [cite: 111]
-            <p>Conheça os fundamentos e objetivos da nossa jornada técnica.</p> [cite: 112]
-        </header>
-
-        <div class="content-grid">
-            <section class="info-block">
-                <h2>O que estudamos?</h2> [cite: 115]
-                <p>A disciplina de Desenvolvimento de Sistemas capacita o aluno a analisar, projetar, codificar e testar softwares.</p> [cite: 116]
-                <p>Focamos em criar soluções que resolvam problemas reais utilizando tecnologias modernas.</p> [cite: 117]
-                
-                <ul class="styled-list">
-                    <li>Lógica de Programação e Algoritmos</li> [cite: 118]
-                    <li>Modelagem de Banco de Dados</li> [cite: 119]
-                    <li>Engenharia de Software e Requisitos</li> [cite: 120]
-                    <li>Desenvolvimento Web (Frontend e Backend)</li> [cite: 121]
-                </ul>
-            </section>
-
-            <aside class="highlight-box">
-                <h3>Objetivo Principal</h3> [cite: 122]
-                <p>"Formar profissionais capazes de atuar em todas as etapas do ciclo de vida de um software, com foco em qualidade e usabilidade."</p> [cite: 123]
-            </aside>
+    <main class="main-sobre">
+        <div class="conteiner-sobre">
+            <h2>Desenvolvimento de Sistemas</h2>
+            <p>Conheça fundamentos e objetivos da nossa jornada teorica</p>
         </div>
-    </main>
+        </main>
 
+        <div class="conteudo-sobre">
+            <div class="texto-sobre">
+                <h2>O estamos estudando?</h2>
+                <p>A disciplina de Desenvolvimento de Sistemas capacita o aluno a analisar,projetar,codificar e testar softwares. Focamos em criar solucoes que resolvam problemas reais utilizando tecnologia moderna</p>
+                <ul class="styled-list">
+                    <li>Logica de programcao e algoritimos</li>
+                    <li>Modelagem de Banco de Dados</li>
+                    <li>Engenharia de Software e requisitos</li>
+                    <li>Desenvolvimento web (front end e back end)</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <h2>Objetivo Principal</h2>
+                <p>"Formar profissionais capazes de atuar em todas as etapas do ciclo de vida de um software,com foco em qualidade e usabilidade."</p>
+
+            </div>
+        </div>
+
+        </section>
     <footer>
         <p>&copy; 2026 Projeto Técnico - Desenvolvimento de Sistemas</p>
     </footer>
+    
+    
 </body>
 </html>
