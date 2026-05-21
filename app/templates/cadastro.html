@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+<main style="max-width: 600px; margin: 60px auto; padding: 0 20px;">
+
+  <div style="background: #fff; border: 1px solid #e0e0e0; border-radius: 10px; padding: 40px;">
+    <h1 style="font-size: 1.6rem; color: #1a1a2e; margin-bottom: 6px;">Cadastro de Aluno</h1>
+    <p style="color: #666; margin-bottom: 30px;">Preencha os dados do aluno abaixo.</p>
+
+    <form method="POST">
+      {{ form.hidden_tag() }}
+
+      <div style="margin-bottom: 18px;">
+        {{ form.nome.label }}
+        {{ form.nome(class="campo") }}
+        {% for erro in form.nome.errors %}
+          <span style="color: red; font-size: 0.85rem;">{{ erro }}</span>
+        {% endfor %}
+      </div>
+
+      <div style="margin-bottom: 18px;">
+        {{ form.email.label }}
+        {{ form.email(class="campo") }}
+        {% for erro in form.email.errors %}
+          <span style="color: red; font-size: 0.85rem;">{{ erro }}</span>
+        {% endfor %}
+      </div>
+
+      <div style="margin-bottom: 18px;">
+        {{ form.idade.label }}
+        {{ form.idade(class="campo") }}
+        {% for erro in form.idade.errors %}
+          <span style="color: red; font-size: 0.85rem;">{{ erro }}</span>
+        {% endfor %}
+      </div>
+
+      <div style="margin-bottom: 18px;">
+        {{ form.sexo.label }}
+        {{ form.sexo(class="campo") }}
+        {% for erro in form.sexo.errors %}
+          <span style="color: red; font-size: 0.85rem;">{{ erro }}</span>
+        {% endfor %}
+      </div>
+
+      <div style="margin-bottom: 18px;">
+        {{ form.matricula.label }}
+        {{ form.matricula(class="campo") }}
+        {% for erro in form.matricula.errors %}
+          <span style="color: red; font-size: 0.85rem;">{{ erro }}</span>
+        {% endfor %}
+      </div>
+
+      <div style="margin-bottom: 28px;">
+        {{ form.cpf.label }}
+        {{ form.cpf(class="campo") }}
+        {% for erro in form.cpf.errors %}
+          <span style="color: red; font-size: 0.85rem;">{{ erro }}</span>
+        {% endfor %}
+      </div>
+
+      {{ form.submit(class="btn-submit") }}
+    </form>
+  </div>
+
+</main>
+
+<style>
+  label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+  }
+  .campo {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border 0.2s;
+  }
+  .campo:focus {
+    border-color: #0d6efd;
+  }
+  .btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #0d6efd;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .btn-submit:hover {
+    background: #0b5ed7;
+  }
+</style>
+
+{% endblock conteudo %}

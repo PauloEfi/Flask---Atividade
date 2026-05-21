@@ -8,7 +8,7 @@ class alunoForm(FlaskForm):
     email     = StringField('Email', validators=[DataRequired(), Email()])
     idade     = IntegerField('Idade', validators=[DataRequired()])
     sexo      = StringField('Sexo', validators=[DataRequired()])
-    matricula = IntegerField('Matricula', validators=[DataRequired()])
-    cpf       = IntegerField('Cpf', validators=[DataRequired()])
+    matricula = IntegerField('Matrícula', validators=[DataRequired()])
+    cpf       = IntegerField('CPF', validators=[DataRequired()])
 
     submit   = SubmitField('Cadastrar')
