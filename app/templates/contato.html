@@ -2,43 +2,52 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Contato</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Sistema Flask - Contato</title>
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
+    <header>
+        <nav class="container">
+            <div class="logo">Flask<span>App</span></div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="/contato" class="active">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<header>
-    <h1>FlaskApp</h1>
+    <main class="container">
+        <header class="page-header">
+            <h1>Entre em Contato</h1> [cite: 126]
+            <p>Dúvidas sobre o projeto ou suporte técnico? Utilize os canais abaixo.</p> [cite: 127]
+        </header>
 
-    <nav>
-        <a href="{{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('sobre') }}">Sobre</a>
-        <a href="{{ url_for('contato') }}">Contato</a>
-    </nav>
-</header>
+        <section class="contact-grid">
+            <div class="contact-card">
+                <div class="icon">✉️</div>
+                <h3>E-mail</h3> [cite: 131]
+                <p>suporte.aluno@escola.com</p> [cite: 132]
+            </div>
 
-<main>
-    <h2>Entre em Contato</h2>
+            <div class="contact-card">
+                <div class="icon">📞</div>
+                <h3>Telefone</h3> [cite: 133]
+                <p>(11) 98765-4321</p> [cite: 133]
+            </div>
 
-    <div class="card">
-        <h3>E-mail</h3>
-        <p>suporte.aluno@escola.com</p>
-    </div>
+            <div class="contact-card">
+                <div class="icon">📍</div>
+                <h3>Laboratório</h3> [cite: 134]
+                <p>Bloco C - Sala 204</p> [cite: 135]
+            </div>
+        </section>
+    </main>
 
-    <div class="card">
-        <h3>Telefone</h3>
-        <p>(11) 98765-4321</p>
-    </div>
-
-    <div class="card">
-        <h3>Laboratório</h3>
-        <p>Bloco C - Sala 204</p>
-    </div>
-</main>
-
-<footer>
-    <p>© 2024 Projeto Técnico</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2026 Projeto Técnico - Desenvolvimento de Sistemas</p>
+    </footer>
 </body>
 </html>
